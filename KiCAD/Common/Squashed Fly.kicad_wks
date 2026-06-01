@@ -150,6 +150,10 @@
 		(name "text13:Text")
 		(pos 109 20)
 	)
+	(tbtext "https://squashedfly.eu/"
+		(name "text18:Text")
+		(pos 9 22.5)
+	)
 	(tbtext "${COMMENT1}"
 		(name "text14:Text")
 		(pos 109 32)
@@ -175,7 +179,7 @@
 		(name "bm1:Bitmap")
 		(pos 9 26.5)
 		(scale 0.2142857143)
-		(comment "SquashedFly Logo")
+		(comment "SquashedFly — https://squashedfly.eu/")
 		(data "iVBORw0KGgoAAAANSUhEUgAAAwoAAANxCAYAAABE3U4jAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz"
 			"AAAuGAAALhgBKqonIAAAIABJREFUeJzs3Xl8HHd9P/7X5zMze+iy5EuyHeckB06TQqHtt1COlH6B"
 			"UlLokdBCKKEtpC2EAgVa4EctfzlaaCEQKCWkIUBID6ctpNC0KYdJKXdCCIlzOoevWLZl3as9Zubz"

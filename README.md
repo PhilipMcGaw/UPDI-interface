@@ -71,7 +71,7 @@ KiCAD/UPDI Board.kicad_pro
 | `KiCAD/UPDI Board.kicad_sch` | Schematic |
 | `KiCAD/UPDI Board.kicad_pcb` | Board layout |
 | `KiCAD/UPDI Board.kicad_dru` | Custom design rules |
-| `KiCAD/Common/` | Local symbols, footprints, worksheets |
+| `KiCAD/Common/` | Local symbols, footprints, worksheets (includes [SquashedFly](https://squashedfly.eu/) title block and logo footprints) |
 | `KiCAD/bom/ibom.html` | Interactive BOM (if generated) |
 
 **Workflow**
@@ -99,8 +99,13 @@ Hardware design files in this repository are licensed under the **[CERN Open Har
 
 You may use, study, modify, and redistribute the schematic and PCB layout under those terms. **Derivative designs must be released under the same license.** If you share the design or boards built from it, include a copy of the license.
 
+## Credits
+
+- **[SquashedFly](https://squashedfly.eu/)** — title block worksheet (`KiCAD/Common/Squashed Fly.kicad_wks`) and optional PCB logo footprints (`SquashedFlySilk`, `SquashedFlyCopper`, etc.) in `KiCAD/Common/Footprints/`
+
 ## Related links
 
+- [SquashedFly](https://squashedfly.eu/)
 - [UART TX/RX swapping made simple](https://philipmcgaw.com/uart-tx-rx-swapping-made-simple/) — poka‑yoke UART symbol and footprints used on this board
 - [microUPDI](https://github.com/MCUdude/microUPDI) — UPDI firmware for compatible serial adapters
 - [KiCad](https://www.kicad.org/) — PCB design software
