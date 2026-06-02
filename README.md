@@ -1,23 +1,20 @@
 # UPDI-interface
 
-A KiCad PCB that breaks out a common **USB‑to‑TTL serial adapter** (often sold as a “USB to TTL Serial Communication Conversion Module”) into **UPDI**, **UART**, and **RS‑485** interfaces. The board is meant to sit between your USB adapter and targets such as AVR microcontrollers, without rewiring a breadboard every time.
+This is a KiCad PCB that breaks out a common **USB‑to‑TTL serial adapter** (often sold as a “USB to TTL Serial Communication Conversion Module”) into **UPDI**, **UART**, and **RS‑485** interfaces. The board is meant to sit between your USB adapter and targets such I am using it with my ROV project.
 
 **Schematic title:** 2TTL‑UPDI interface PCB  
 **Author:** [Philip McGaw](https://github.com/PhilipMcGaw)
 
 ## Features
 
-- **Dual 7‑pin sockets** (`Primary Header`, `Second Header`) for plugging in a standard USB‑to‑TTL module (two rows of header pins).
+- **Dual 7‑pin sockets** (`Primary Header`, `Second Header`) for plugging in a standard USB‑to‑TTL module (two rows of header pins) You will need to solder these on to the board yourself.
 - **UPDI programming**
   - 1×3 pin header (`UPDI`)
   - 2×3 pin header (`AVR UPDI Header`) for a typical 6‑pin AVR UPDI cable footprint
-  - Intended for use with firmware such as [microUPDI](https://github.com/MCUdude/microUPDI) on the USB adapter
 - **Two UART ports** (`UART0`, `UART1`) — 1×4 pin headers (TX, RX, and flow‑control lines routed per the schematic).
 - **RS‑485** (`RS485`) — 1×4 pin header via an on‑board **MAX3072E** half‑duplex transceiver (+3.3 V, ESD‑protected).
-- **Poka‑yoke UART** (`R1`, `Poka Yoke UART`) — not a connector: a **solder‑bridge (or 0805 zero‑ohm) swap point** on the UART0 TX/RX lines so you can correct swapped TX/RX without a PCB respin. See [UART TX/RX swapping made simple](https://philipmcgaw.com/uart-tx-rx-swapping-made-simple/).
+- **Poka‑yoke UART** (`Poka Yoke UART`) — not a connector: a **solder‑bridge (or 0805 zero‑ohm) swap point** on the UART0 TX/RX lines so you can correct swapped TX/RX without a PCB respin. See [UART TX/RX swapping made simple](https://philipmcgaw.com/uart-tx-rx-swapping-made-simple/). This will be removed once I am sure I did the connections correctly.
 - **Selectable I/O voltage** — solder jumper `Voltage Select` (default **5 V** bridged; optional **3.3 V**).
-- **External power input** (`Voltage in`) — 1×3 pin header when you do not want to rely on USB power alone.
-- **Power LED** and input protection (**RSX051** Schottky).
 
 ## What you need
 
@@ -25,7 +22,6 @@ A KiCad PCB that breaks out a common **USB‑to‑TTL serial adapter** (often so
 |------|--------|
 | USB‑to‑TTL module | Fits the two 1×7 female sockets; common 6‑pin/8‑pin FTDI‑style modules |
 | Host software | e.g. [avrdude](https://github.com/avrdudes/avrdude) with UPDI, or [pyupdi](https://github.com/mraardvark/pyupdi) — depends on your adapter firmware |
-| UPDI firmware (optional) | [microUPDI](https://github.com/MCUdude/microUPDI) if your adapter does not already speak UPDI |
 
 Fabricate the PCB from the KiCad project (see below). Solder the SMD parts, headers, and the USB module sockets.
 
@@ -60,7 +56,7 @@ How it works and how to use it in other projects: [UART TX/RX swapping made simp
 
 ## KiCad project
 
-Open the project in **KiCad 9 or later** (project files use the current KiCad 10 schematic format):
+Open the project in **KiCad 10 or later** (project files use the current KiCad 10 schematic format):
 
 ```
 KiCAD/UPDI Board.kicad_pro
@@ -74,20 +70,6 @@ KiCAD/UPDI Board.kicad_pro
 | `KiCAD/Common/` | Local symbols, footprints, worksheets (includes [SquashedFly](https://squashedfly.eu/) title block and logo footprints) |
 | `KiCAD/bom/ibom.html` | Interactive BOM (if generated) |
 
-**Workflow**
-
-1. Open `UPDI Board.kicad_pro` in KiCad.
-2. Review schematic and run **ERC**.
-3. In PCB Editor, run **DRC**, then export Gerbers/BOM/position files for your fab.
-4. Use your usual assembly process; the repo includes hand‑solder‑friendly SMD footprints where applicable.
-
-Library tables (`fp-lib-table`, `sym-lib-table`) point at `KiCAD/Common/` for project‑specific footprints (e.g. `Poka yoke UART SMD`, `Poka yoke UART Solder`).
-
-## Design notes
-
-- The board does **not** include a USB PHY or MCU — it only adapts and routes signals from your **existing USB‑serial module**.
-- Dual UART and UPDI routing assume your adapter firmware exposes the right logical ports (e.g. UPDI on the serial interface used by avrdude’s `serialupdi` programmer).
-- A **ground plane** was added in a later revision (see git history).
 
 ## License
 
@@ -107,5 +89,4 @@ You may use, study, modify, and redistribute the schematic and PCB layout under 
 
 - [SquashedFly](https://squashedfly.eu/)
 - [UART TX/RX swapping made simple](https://philipmcgaw.com/uart-tx-rx-swapping-made-simple/) — poka‑yoke UART symbol and footprints used on this board
-- [microUPDI](https://github.com/MCUdude/microUPDI) — UPDI firmware for compatible serial adapters
 - [KiCad](https://www.kicad.org/) — PCB design software
