@@ -7,7 +7,7 @@ This is a KiCad PCB that breaks out a common **USB‑to‑TTL serial adapter** (
 
 ## Features
 
-- **Dual 7‑pin sockets** (`Primary Header`, `Second Header`) for plugging in a standard USB‑to‑TTL module (two rows of header pins) You will need to solder these on to the board yourself.
+- **Dual 7‑pin sockets** these are for plugging in a standard USB‑to‑TTL module (two rows of header pins) You will need to solder these on to the USB-TTL board yourself.
 - **UPDI programming**
   - 1×3 pin header (`UPDI`)
   - 2×3 pin header (`AVR UPDI Header`) for a typical 6‑pin AVR UPDI cable footprint
