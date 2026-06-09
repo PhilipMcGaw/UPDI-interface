@@ -90,3 +90,6 @@ You may use, study, modify, and redistribute the schematic and PCB layout under 
 - [SquashedFly](https://squashedfly.eu/)
 - [UART TX/RX swapping made simple](https://philipmcgaw.com/uart-tx-rx-swapping-made-simple/) — poka‑yoke UART symbol and footprints used on this board
 - [KiCad](https://www.kicad.org/) — PCB design software
+
+
+https://wiki.dfrobot.com/tel0190/#tech_specs
