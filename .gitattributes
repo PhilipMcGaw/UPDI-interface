@@ -1,5 +1,5 @@
 *.kicad_pcb linguist-detectable=true
-*.sch linguist-detectable=true
+*.kicad_sch linguist-detectable=true
 fp-lib-table linguist-generated=true
 *.xml linguist-generated=true
 *.txt linguist-generated=true
