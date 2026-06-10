@@ -5,7 +5,7 @@
 
 This is a KiCad PCB that breaks out a common **USB‑to‑TTL serial adapter** (often sold as a “USB to TTL Serial Communication Conversion Module”) into **UPDI**, **UART**, and **RS‑485** interfaces. The board is meant to sit between your USB adapter and targets such I am using it with my ROV project.
 
-**Schematic title:** 2TTL‑UPDI interface PCB  
+**Schematic title:** 2TTL‑UPDI interface PCB
 **Author:** [Philip McGaw](https://github.com/PhilipMcGaw)
 
 ## Features
@@ -47,13 +47,13 @@ Fabricate the PCB from the KiCad project (see below). Solder the SMD parts, head
 | J15 | UPDI | 1×3 pin header |
 | J1 | AVR UPDI Header | 2×3 pin header |
 | J13 | RS485 | 1×4 pin header (A/B + power/GND per schematic) |
-| R1 | Poka Yoke UART | Solder‑jumper swap footprint on UART0 TX/RX (not a header) |
+| R1 | Poka Yoke UART | Solder‑jumper swap footprint on UART0 TX/RX |
 
 Pin‑exact assignments are in `KiCAD/UPDI Board.kicad_sch` and the PCB layout; check the silkscreen and net labels (`TX0`, `RX0`, `TX0_poka`, `RX0_poka`, `UPDI`, `A`, `B`, etc.) before wiring.
 
 ### UART TX/RX swapping (poka‑yoke)
 
-Getting UART **TX** and **RX** the wrong way round is easy at design time and painful to fix once the board is built. **`R1`** implements a [poka‑yoke](https://en.wikipedia.org/wiki/Poka-yoke) crossover: two solder bridges (this board uses the **solder jumper** footprint; an **0805 zero‑ohm** variant is also in `KiCAD/Common/Footprints/`) let you route either straight‑through or swapped connections by changing which pads are bridged—no trace cuts or bodge wires.
+Getting UART **TX** and **RX** the wrong way round is easy at design time and painful to fix once the board is built. **`R1`** implements a [poka‑yoke](https://en.wikipedia.org/wiki/Poka-yoke) crossover: two solder bridges  let you route either straight‑through or swapped connections by changing which pads are bridged—no trace cuts or bodge wires.
 
 How it works and how to use it in other projects: [UART TX/RX swapping made simple](https://philipmcgaw.com/uart-tx-rx-swapping-made-simple/) (Philip McGaw). KiCad symbol and both footprints live under `KiCAD/Common/`.
 
@@ -92,6 +92,3 @@ You may use, study, modify, and redistribute the sorcecode, schematic and PCB la
 - [SquashedFly](https://squashedfly.eu/)
 - [UART TX/RX swapping made simple](https://philipmcgaw.com/uart-tx-rx-swapping-made-simple/) — poka‑yoke UART symbol and footprints used on this board
 - [KiCad](https://www.kicad.org/) — PCB design software
-
-
-https://wiki.dfrobot.com/tel0190/#tech_specs
