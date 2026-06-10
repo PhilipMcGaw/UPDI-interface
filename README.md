@@ -76,7 +76,8 @@ KiCAD/UPDI Board.kicad_pro
 
 ## License
 
-Hardware design files in this repository are licensed under the **[CERN Open Hardware Licence v2 — Strongly Reciprocal (CERN-OHL-S-2.0)](LICENSE)**, an open source hardware license recommended by the [Open Source Hardware Association (OSHWA)](https://oshwa.org/).
+ * Hardware design files in this repository are licensed under the **[CERN Open Hardware Licence v2 — Strongly Reciprocal (CERN-OHL-S-2.0)](LICENSE)**, an open source hardware license recommended by the [Open Source Hardware Association (OSHWA)](https://oshwa.org/).
+ * Software files in this repository are licensed under the **[Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)] (LICENSE)**
 
 - **SPDX identifier:** `CERN-OHL-S-2.0`
 - **Copyright:** [Philip McGaw](https://philipmcgaw.com/)
