@@ -1,3 +1,5 @@
+* text=auto
+
 *.kicad_pcb linguist-detectable=true
 *.kicad_sch linguist-detectable=true
 fp-lib-table linguist-generated=true
