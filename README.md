@@ -1,7 +1,7 @@
 # UPDI-interface
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-purple.svg)](https://opensource.org/licenses/MIT)
-[![Hardware: CERN-OHL-W](https://img.shields.io/badge/License-CERN--OHL--W--2.0-purple)](https://ohwr.org)
+[![License: CC BY-NC-SA](https://img.shields.io/badge/License-CC_BY--NC--SA-purple.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+[![Hardware: CERN-OHL-S](https://img.shields.io/badge/License-CERN--OHL--S--2.0-purple)](https://gitlab.com/ohwr/project/cernohl/-/wikis/uploads/819d71bea3458f71fba6cf4fb0f2de6b/cern_ohl_s_v2.txt)
 
 This is a KiCad PCB that breaks out a common **USB‑to‑TTL serial adapter** (often sold as a “USB to TTL Serial Communication Conversion Module”) into **UPDI**, **UART**, and **RS‑485** interfaces. The board is meant to sit between your USB adapter and targets such I am using it with my ROV project.
 
