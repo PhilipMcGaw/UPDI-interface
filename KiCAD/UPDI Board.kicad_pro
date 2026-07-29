@@ -759,6 +759,12 @@
       "Net-(D12-K)": [
         "PCBway min 1 oz "
       ],
+      "Net-(D13-A)": [
+        "PCBway min 1 oz "
+      ],
+      "Net-(D13-K)": [
+        "PCBway min 1 oz "
+      ],
       "Net-(D3-A)": [
         "PCBway min 1 oz "
       ],
@@ -1115,7 +1121,7 @@
         "uuid": "4b85b8a1-3b52-4af9-b3a4-471ab529b035"
       }
     ],
-    "used_designators": "",
+    "used_designators": "R20,D13,#PWR79-80",
     "variants": []
   },
   "sheets": [
